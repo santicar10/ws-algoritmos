@@ -12,16 +12,10 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="titulo">
+      <b>TIENDA ADMINISTRADOR</b>
+    </div>
     <div class="cont">
-     
-
-        <div>
-          <input type="text" id="nombreProduc">
-          <button id="btnAgregar" class="btn btn-primary" onclick="BuscarPro()">
-            Buscar  
-          </button>
-        </div>
-
         <div class="mb-3">
           <select class="form-select" required="" aria-label="select example" id="catego">
             <option value="">Escoja categoria del producto</option>
@@ -69,23 +63,25 @@
         </div>
 
         <div class="mb-3">
-          <button id="btnAgregar" class="btn btn-primary" onclick="agregar()">
-            Agregar producto al Final
-          </button>
+          <input type="radio" id="radioEnd" class="btn btn-primary" name="radioOpcion">
+            Agregar producto al Final de la lista 
         </div>
 
         <div class="mb-3">
-          <button id="btnAgregarInicio" class="btn btn-primary" onclick="agregarInicio()">
-            Agregar producto al Inicio
+          <input type="radio" id="radioStart" class="btn btn-primary" name="radioOpcion">
+            Agregar producto al Inicio de la lista
+        </div>
+
+        <div class="mb-3">
+          <button id="btnAgregarInicio" class="btn btn-primary" onclick="addProductos()">
+            agregar
           </button>
         </div>
 
-
-      <div>
         <div class="apart">
           <p>opciones de administrador</p>
         </div>
-        <div class="mb-3">
+        <div class="busqueda">
           <button id="btnAgregar" class="btn btn-primary" onclick="productoCatego()">
             cantidad de productos por categoria 
           </button>
@@ -95,6 +91,21 @@
           <button id="btnAgregar" class="btn btn-primary" onclick="TotalPrecio()">
             valor total de productos  
           </button>
+        </div>
+        <div>
+          <input class="form-control" type="text" id="nombreProduc" placeholder="ingrese el nombre del producto que desea buscar">
+          <div class="busqueda" >
+            <button id="btnAgregar" class="btn btn-primary" onclick="BuscarPro()">
+              Buscar  
+            </button>
+            <button id="eliminar" class="btn btn-primary">
+              Eliminar  
+            </button>
+          </div>
+        </div>
+        <div class="factura" id="factura">
+          <p>productos: </p>
+          <button class="btn btn-primary" onclick="ordenarAZ()" >A-Z</button>
         </div>
       </div>
 

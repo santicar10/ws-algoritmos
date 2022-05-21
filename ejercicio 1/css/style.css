@@ -1,7 +1,7 @@
 .cont{
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .apart{
@@ -9,4 +9,31 @@
     height: 30px;
     background-color: whitesmoke;
     border-radius: 3px;
+}
+
+.factura{
+    width: auto;
+    height: 1000px;
+    border: 2px solid whitesmoke;
+    border-radius: 3px;
+    background-color: whitesmoke;
+}
+
+.busqueda{
+    width: auto;
+    height: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.titulo{
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px;
+    font-size: xx-large;
+    background-color: whitesmoke;
 }
