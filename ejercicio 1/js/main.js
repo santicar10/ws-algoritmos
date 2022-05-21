@@ -1,24 +1,5 @@
 const factura = document.getElementById("factura");
-let productos = [
-    {
-        canti: 10,
-        precio: 3500,
-        nombreProducto: "Chaqueta Bomber",
-        catego: "Ropa"
-    },
-    {
-        canti: 12,
-        precio: 3500,
-        nombreProducto: "Muebles",
-        catego: "Hogar"
-    },
-    {
-        canti: 5,
-        precio: 3500,
-        nombreProducto: "Iphone XS",
-        catego: "Tecnologia"
-    }
-];
+let productos = [];
 
 pintarArray();
 mostrar();
@@ -42,7 +23,7 @@ function addProductos() {
 }
 
 
-//punto 1
+//punto 1 (agregar a la lista)
 
 function agregar() {
     const nombreProducto = document.getElementById("nombreProducto").value;
@@ -81,7 +62,7 @@ function mostrar() {
     })
 }
 
-//punto 2
+//punto 2 (agregar al inicio de la lista)
 
 function agregarInicio() {
     const nombreProducto = document.getElementById("nombreProducto").value;
@@ -99,7 +80,7 @@ function agregarInicio() {
     pintarArray();
 }
 
-//punto 3
+//punto 3 (total de productos por categoria)
 
 let cont1 = 0;
 let cont2 = 0;
@@ -120,7 +101,7 @@ function productoCatego(){
     alert("de la categoria tecnologia hay: "+ cont1 +" productos" + "\n" + "de la categoria hogar hay: "+ cont2 +" productos" + "\n" + "de la categoria Ropa hay: "+ cont3 +" productos" + "\n" )
 }
 
-//punto 4
+//punto 4 (cantidad de todos los productos)
 
 function TotalCatego() {
     let total = 0;
@@ -129,7 +110,7 @@ function TotalCatego() {
     
 }
 
-//punto 5
+//punto 5 (precio total de todos los productos)
 
 function TotalPrecio(){
     let total = 0;
@@ -139,7 +120,54 @@ function TotalPrecio(){
     alert("el valor total de los productos es de: "+total);
 }
 
-//punto 8
+//punjto 6 (agregar cantidades)
+
+
+const aad = document.getElementById("radioAdd");
+const res = document.getElementById("radioRes");
+
+function addRes() {
+    if (aad.checked == false && res.checked == false) {
+        alert("Por favor seleccione una opcion")
+    }
+    else
+    {
+        if (aad.checked == true) {
+            add();
+        }
+        if (res.checked == true) {
+            res();
+        }
+    }
+}
+
+function add(){
+    const namee = document.getElementById("editPro")
+    const cant = parseInt(document.getElementById("numCant").value);
+
+    productos.forEach(item => {
+        if ( item.nombreProducto == namee) {
+            item.canti = item.canti + cant;
+        }
+        
+    });
+}
+
+//punto 7 (eliminar cantidades)
+
+function Res(){
+    const namee = document.getElementById("editPro")
+    const cant = parseInt(document.getElementById("numCant").value);
+
+    productos.forEach(item => {
+        if ( item.nombreProducto == namee) {
+            item.canti = item.canti - cant;
+        }
+        
+    });
+}
+
+//punto 8 (buscar producto)
 
 function BuscarPro(){
     let namee = document.getElementById("nombreProduc").value;
@@ -152,7 +180,7 @@ function BuscarPro(){
         }
 }
 
-//punto 9
+//punto 9 (ordenar productos)
 
 const eliminar = document.getElementById("eliminar");
 
@@ -161,7 +189,6 @@ function borrar(name) {
     let n = 0;
     
     productos.forEach((producto)=>{
-        console.log("Entreeeee")
         if (producto.nombreProducto == name) {
             console.log(producto.nombreProducto);
             n = producto.nombreProducto;
@@ -169,9 +196,8 @@ function borrar(name) {
     });
     const nuevaLista = productos.filter(producto => producto.nombreProducto !== n);
     productos = nuevaLista;
-    console.log("---------")
     pintarArray();
-    console.log("---------")
+
 }
 
 eliminar.addEventListener("click", () => {
@@ -179,7 +205,7 @@ eliminar.addEventListener("click", () => {
     borrar(name);    
 })
 
-//punto10 
+//punto 10 (ordenar en orden alfabetico)
 
 function ordenarAZ(){
     productos.sort((nombre1, nombre2) => {

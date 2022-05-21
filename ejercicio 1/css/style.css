@@ -6,14 +6,17 @@
 
 .apart{
     width: auto;
-    height: 30px;
+    height: 40px;
     background-color: whitesmoke;
-    border-radius: 3px;
+    border-radius: 5px;
+    font-size: x-large;
+    text-align: center;
 }
 
 .factura{
     width: auto;
-    height: 1000px;
+    height: auto;
+    margin-top: 15px;
     border: 2px solid whitesmoke;
     border-radius: 3px;
     background-color: whitesmoke;
@@ -22,8 +25,8 @@
 .busqueda{
     width: auto;
     height: auto;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .titulo{

@@ -62,6 +62,11 @@
           </div>
         </div>
 
+
+
+
+
+
         <div class="mb-3">
           <input type="radio" id="radioEnd" class="btn btn-primary" name="radioOpcion">
             Agregar producto al Final de la lista 
@@ -78,8 +83,15 @@
           </button>
         </div>
 
+
+
+
+
+
+
+
         <div class="apart">
-          <p>opciones de administrador</p>
+          <b>opciones de administrador</b>
         </div>
         <div class="busqueda">
           <button id="btnAgregar" class="btn btn-primary" onclick="productoCatego()">
@@ -103,6 +115,31 @@
             </button>
           </div>
         </div>
+
+        <div>
+          <div>
+            <input class="form-control" type="text" id="editPro" placeholder="ingrese el nombre del producto que desea ajustar">
+          </div>
+
+          <div class="busqueda">
+            <input class="form-control" type="text" id="numCant" placeholder="ingrese la cantidad que desea agregar o quitar">
+          </div>
+
+          <div class="mb-3">
+            <input type="radio" id="radioAdd" class="btn btn-primary" name="radioOpcion">
+              Agregar cantidad
+          </div>
+  
+          <div class="mb-3">
+            <input type="radio" id="radioRes" class="btn btn-primary" name="radioOpcion">
+              Quitar cantidad
+          </div>
+
+          <button id="cambios" class="btn btn-primary" onclick="addRes()">
+            Guardar cambios 
+          </button>
+        </div>
+
         <div class="factura" id="factura">
           <p>productos: </p>
           <button class="btn btn-primary" onclick="ordenarAZ()" >A-Z</button>
