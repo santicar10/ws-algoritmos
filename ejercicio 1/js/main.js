@@ -22,7 +22,6 @@ function addProductos() {
     }
 }
 
-
 //punto 1 (agregar a la lista)
 
 function agregar() {
