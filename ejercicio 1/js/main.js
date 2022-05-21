@@ -46,6 +46,7 @@ function mostrar() {
     const name3 = document.createElement("p");
     const name4 = document.createElement("p");
     const separate = document.createElement("hr");
+    
     productos.forEach(item => {
 
         name1.textContent = "NOMBRE: " + item.nombreProducto;
@@ -122,46 +123,44 @@ function TotalPrecio(){
 //punjto 6 (agregar cantidades)
 
 
-const aad = document.getElementById("radioAdd");
-const res = document.getElementById("radioRes");
 
 function addRes() {
-    if (aad.checked == false && res.checked == false) {
-        alert("Por favor seleccione una opcion")
-    }
-    else
-    {
+    const aad = document.getElementById("radioAdd");
+    const res = document.getElementById("radioRes");
+
         if (aad.checked == true) {
             add();
         }
         if (res.checked == true) {
-            res();
+            Res();
         }
-    }
 }
 
 function add(){
-    const namee = document.getElementById("editPro")
+    const namee = document.getElementById("editPro").value;
     const cant = parseInt(document.getElementById("numCant").value);
 
     productos.forEach(item => {
         if ( item.nombreProducto == namee) {
             item.canti = item.canti + cant;
+            alert("se edito con exito");
         }
-        
+        mostrar()
     });
 }
 
 //punto 7 (eliminar cantidades)
 
 function Res(){
-    const namee = document.getElementById("editPro")
+    const namee = document.getElementById("editPro").value;
     const cant = parseInt(document.getElementById("numCant").value);
 
     productos.forEach(item => {
         if ( item.nombreProducto == namee) {
             item.canti = item.canti - cant;
+            alert("se edito con exito");
         }
+        mostrar()
         
     });
 }
@@ -237,6 +236,17 @@ function pintarArray() {
         console.log("Precio: " + producto.precio);
     })
 }
+
+//loa storage
+
+if(localStorage.getItem("usuario")!=null){
+    alert("Bienvenid@ "+localStorage.getItem("usuario"));
+  }
+  else{
+    let nombre= prompt("ingrese nombre");
+    localStorage.setItem("usuario",nombre);
+  }
+  
 
 
 
