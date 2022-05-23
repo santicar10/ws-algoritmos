@@ -143,7 +143,7 @@ function add(){
     productos.forEach(item => {
         if ( item.nombreProducto == namee) {
             item.canti = item.canti + cant;
-            alert("se edito con exito");
+            alert("se edito con exito: "+item.nombreProducto+" la cantidad agregada ha sido de: "+cant);
         }
         mostrar()
     });
@@ -158,7 +158,7 @@ function Res(){
     productos.forEach(item => {
         if ( item.nombreProducto == namee) {
             item.canti = item.canti - cant;
-            alert("se edito con exito");
+            alert("se edito con exito: "+item.nombreProducto+"\n"+" la cantidad restada ha sido de: "+cant);
         }
         mostrar()
         
@@ -178,7 +178,7 @@ function BuscarPro(){
         }
 }
 
-//punto 9 (ordenar productos)
+//punto 9 (eliminar producto)
 
 const eliminar = document.getElementById("eliminar");
 
@@ -227,6 +227,8 @@ function ordenarAZ(){
     });
     alert(mensaje);
 }
+
+// ()()()()
 
 function pintarArray() {
     productos.forEach(producto => {
