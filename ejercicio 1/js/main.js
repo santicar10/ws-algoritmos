@@ -122,8 +122,6 @@ function TotalPrecio(){
 
 //punjto 6 (agregar cantidades)
 
-
-
 function addRes() {
     const aad = document.getElementById("radioAdd");
     const res = document.getElementById("radioRes");
