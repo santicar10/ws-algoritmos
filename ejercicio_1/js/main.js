@@ -87,6 +87,10 @@ let cont2 = 0;
 let cont3 = 0;
 let xy = 0;
 
+function nada(){
+    
+}
+
 function productoCatego(){
     productos.forEach(item => {
         if (item.catego == "Tecnologia") {
