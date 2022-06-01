@@ -85,7 +85,6 @@ function agregarInicio() {
 let cont1 = 0;
 let cont2 = 0;
 let cont3 = 0;
-let xy = 0;
 
 function nada(){
     
