@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
     <title>Document</title>
   </head>
   <body>
@@ -16,64 +12,80 @@
       <b>TIENDA ADMINISTRADOR</b>
     </div>
     <div class="cont">
-        <div class="mb-3">
-          <select class="form-select" required="" aria-label="select example" id="catego">
+        <div>
+          <select class="imput" aria-label="select example" id="catego">
             <option value="">Escoja categoria del producto</option>
             <option value="Hogar">Hogar</option>
             <option value="Tecnologia">Tecnologia</option>
             <option value="Ropa">Ropa</option>
           </select>
-          <div class="invalid-feedback">Elija una categoria</div>
+          <div class="texto">Elija una categoria</div>
         </div>
 
-        <div class="mb-3">
+        <div>
+          <hr class="hr">
+        </div>
+
+        <div>
           <input
           type="text"
-            class="form-control"
             id="nombreProducto"
+            class="imput"
             placeholder="nombre del producto"
           ></input>
-          <div class="invalid-feedback">
+          <div class="texto">
             por favor ingrese el nombre del producto.
           </div>
         </div>
 
-        <div class="mb-3">
+        <div>
+          <hr class="hr">
+        </div>
+
+        <div>
           <input
             type="text"
-            class="form-control"
             id="precio"
+            class="imput"
             placeholder="precio del producto"
           />
-          <div class="invalid-feedback">
+          <div class="texto">
             por favor ingrese la precio del producto.
           </div>
         </div>
 
-        <div class="mb-3">
+        <div>
+          <hr class="hr">
+        </div>
+
+        <div>
           <input
             type="text"
-            class="form-control"
             id="canti"
+            class="imput"
             placeholder="cantidad del producto"
           />
-          <div class="invalid-feedback">
+          <div class="texto">
             por favor ingrese la cantidad del producto.
           </div>
         </div>
 
-        <div class="mb-3">
-          <input type="radio" id="radioEnd" class="btn btn-primary" name="radioOpcion">
+        <div>
+          <hr class="hr">
+        </div>
+
+        <div class="texto" >
+          <input  type="radio" id="radioEnd" name="radioOpcion">
             Agregar producto al Final de la lista 
         </div>
 
-        <div class="mb-3">
-          <input type="radio" id="radioStart" class="btn btn-primary" name="radioOpcion">
+        <div class="texto" >
+          <input  type="radio" id="radioStart" name="radioOpcion">
             Agregar producto al Inicio de la lista
         </div>
 
-        <div class="mb-3">
-          <button id="btnAgregarInicio" class="btn btn-primary" onclick="addProductos()">
+        <div>
+          <button id="btnAgregarInicio" onclick="addProductos()">
             agregar
           </button>
         </div>
@@ -82,55 +94,55 @@
           <b>opciones de administrador</b>
         </div>
         <div class="busqueda">
-          <button id="btnAgregar" class="btn btn-primary" onclick="productoCatego()">
+          <button id="btnAgregar" onclick="productoCatego()">
             cantidad de productos por categoria 
           </button>
-          <button id="btnAgregar" class="btn btn-primary" onclick="TotalCatego()">
+          <button id="btnAgregar" onclick="TotalCatego()">
             total de productos 
           </button>
-          <button id="btnAgregar" class="btn btn-primary" onclick="TotalPrecio()">
+          <button id="btnAgregar" onclick="TotalPrecio()">
             valor total de productos  
           </button>
         </div>
         <div>
-          <input class="form-control" type="text" id="nombreProduc" placeholder="ingrese el nombre del producto que desea buscar">
-          <div class="busqueda" >
-            <button id="btnAgregar" class="btn btn-primary" onclick="BuscarPro()">
+          <input class="imput" type="text" id="nombreProduc" placeholder="ingrese el nombre del producto que desea buscar">
+          <div >
+            <button id="btnAgregar" onclick="BuscarPro()">
               Buscar  
             </button>
-            <button id="eliminar" class="btn btn-primary">
+            <button id="eliminar">
               Eliminar  
             </button>
           </div>
         </div>
 
         <div>
-          <div>
-            <input class="form-control" type="text" id="editPro" placeholder="ingrese el nombre del producto que desea ajustar">
+          <div >
+            <input class="imput" type="text" id="editPro" placeholder="ingrese el nombre del producto que desea ajustar">
           </div>
 
-          <div class="busqueda">
-            <input class="form-control" type="text" id="numCant" placeholder="ingrese la cantidad que desea agregar o quitar">
+          <div >
+            <input class="imput" type="text" id="numCant" placeholder="ingrese la cantidad que desea agregar o quitar">
           </div>
 
-          <div class="mb-3">
-            <input type="radio" id="radioAdd" class="btn btn-primary" name="radioOpcion">
+          <div class="texto">
+            <input type="radio" id="radioAdd" name="radioOpcion">
               Agregar cantidad
           </div>
   
-          <div class="mb-3">
-            <input type="radio" id="radioRes" class="btn btn-primary">
+          <div class="texto">
+            <input type="radio" id="radioRes">
               Quitar cantidad
           </div>
 
-          <button class="btn btn-primary" onclick="addRes()">
+          <button onclick="addRes()">
             Guardar cambios 
           </button>
         </div>
 
         <div class="factura" id="factura">
           <p>productos: </p>
-          <button class="btn btn-primary" onclick="ordenarAZ()" >A-Z</button>
+          <button onclick="ordenarAZ()" >A-Z</button>
         </div>
       </div>
 

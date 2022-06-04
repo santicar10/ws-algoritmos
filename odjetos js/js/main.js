@@ -1,6 +1,20 @@
-let nombre = prompt("ingrese su nombre");
-let nota = prompt("ingrese su calificacion");
 
-let array = [nombre,nota];
+class Animal{
+    
+   constructor(nombre){
+    this.nombre = nombre === undefined ? 0 : nombre;
+   }
 
-console.log(array);
+   get nombre(){
+       return this.nombre;
+   }
+   set nombre(nombre){
+       this.nombre = nombre;
+   }
+
+}
+
+const animal = new Animal("leon");
+console.log(animal.nombre);
+
+

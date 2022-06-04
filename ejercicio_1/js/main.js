@@ -6,49 +6,72 @@ mostrar();
 
 const inicio = document.getElementById("radioStart");
 const final = document.getElementById("radioEnd");
+const nombreProducto = document.getElementById("nombreProducto");
+const categoria = document.getElementById("catego")    
+const cantidad = (document.getElementById("canti"));
+const precio = (document.getElementById("precio"));
 
 function addProductos() {
+
     if (inicio.checked == false && final.checked == false) {
         alert("Por favor seleccione una opcion")
     }
-    else
+    else if (nombreProducto.value === "" ) {
+        alert("porfavor verifique los datos")
+
+    }else
     {
+
+        const producto = {
+            "nombreProducto": nombreProducto.value,
+            "catego": categoria.value,
+            "canti" : parseInt(cantidad.value),
+            "precio": parseInt(precio.value)
+        }
+
         if (inicio.checked == true) {
-            agregarInicio();
+            
+            agregarInicio(producto);
         }
         if (final.checked == true) {
-            agregar();
+            agregar(producto);
         }
+        let ele = document.querySelector('input[name="nombreProducto"]');
+        ele.value = "";
+
+
     }
 }
 
 //punto 1 (agregar a la lista)
 
-function agregar() {
-    const nombreProducto = document.getElementById("nombreProducto").value;
-    const categoria = document.getElementById("catego").value;    
-    const cantidad = parseInt(document.getElementById("canti").value);
-    const precio = parseInt(document.getElementById("precio").value);
-    const producto = {
-        "nombreProducto": nombreProducto,
-        "catego": categoria,
-        "canti" : cantidad,
-        "precio": precio
-    }
+function agregar(producto) {
     productos.push(producto);  
     mostrar();  
     pintarArray();
 }
 
 function mostrar() {
-    const name1 = document.createElement("p");
-    const name2 = document.createElement("p");
-    const name3 = document.createElement("p");
-    const name4 = document.createElement("p");
-    const separate = document.createElement("hr");
+    
+    if (factura.hasChildNodes) {
+        let nodes = factura.childNodes;
+        while (factura.firstChild) {
+            factura.removeChild(factura.firstChild);
+        }
+    }
+    
+    console.log(productos.length);
     
     productos.forEach(item => {
 
+        const name1 = document.createElement("p");
+        const name2 = document.createElement("p");
+        const name3 = document.createElement("p");
+        const name4 = document.createElement("p");
+        const separate = document.createElement("hr");
+
+        console.log("holaa");
+        
         name1.textContent = "NOMBRE: " + item.nombreProducto;
         name2.textContent = "CATEGORIA: " + item.catego;
         name3.textContent = "CANTIDAD: " + item.canti;
@@ -62,19 +85,14 @@ function mostrar() {
     })
 }
 
+function mostrarpro(producto){
+    alert("producto encontrado\n" + producto.nombreProducto)
+}
+
 //punto 2 (agregar al inicio de la lista)
 
-function agregarInicio() {
-    const nombreProducto = document.getElementById("nombreProducto").value;
-    const categoria = document.getElementById("catego").value;
-    const cantidad = parseInt(document.getElementById("canti").value)
-    const precio = parseInt(document.getElementById("precio").value);
-    const producto = {
-        "nombreProducto": nombreProducto,
-        "catego": categoria,
-        "canti" : cantidad,
-        "precio": precio
-    }
+function agregarInicio(producto) {
+
     productos.unshift(producto);
     mostrar();
     pintarArray();
@@ -85,10 +103,6 @@ function agregarInicio() {
 let cont1 = 0;
 let cont2 = 0;
 let cont3 = 0;
-
-function nada(){
-    
-}
 
 function productoCatego(){
     productos.forEach(item => {
@@ -174,7 +188,7 @@ function BuscarPro(){
     console.log(namee)
         const objectoEncontrado = productos.find(item => item.nombreProducto === namee);
         if (objectoEncontrado != null) {
-            alert( "Producto encontrado" + JSON.stringify(objectoEncontrado));  
+            mostrarpro(objectoEncontrado);  
         } else {
             alert("No hay un producto con el nombre");
         }
@@ -196,7 +210,7 @@ function borrar(name) {
     });
     const nuevaLista = productos.filter(producto => producto.nombreProducto !== n);
     productos = nuevaLista;
-    pintarArray();
+    mostrar();
 
 }
 
@@ -241,7 +255,7 @@ function pintarArray() {
     })
 }
 
-//loa storage
+//local storage
 
 if(localStorage.getItem("usuario")!=null){
     alert("Bienvenid@ "+localStorage.getItem("usuario"));

@@ -11,6 +11,7 @@
     border-radius: 5px;
     font-size: x-large;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .factura{
@@ -20,14 +21,9 @@
     border: 2px solid whitesmoke;
     border-radius: 3px;
     background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.busqueda{
-    width: auto;
-    height: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
 
 .titulo{
     width: auto;
@@ -39,4 +35,28 @@
     border-radius: 5px;
     font-size: xx-large;
     background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imput{
+    width: auto;
+    height: 30px;
+    border-radius: 8px;
+    text-align: left;
+    margin: auto;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.hr{
+    border-color:dimgray;
 }
