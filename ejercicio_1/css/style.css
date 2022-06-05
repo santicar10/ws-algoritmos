@@ -7,21 +7,23 @@
 .apart{
     width: auto;
     height: 40px;
-    background-color: whitesmoke;
+    background-color: #DEC81F;
     border-radius: 5px;
     font-size: x-large;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 .factura{
     width: auto;
     height: auto;
     margin-top: 15px;
-    border: 2px solid whitesmoke;
+    border: 2px solid #DEC81F;
     border-radius: 3px;
-    background-color: whitesmoke;
+    background-color: #DEC81F;
     font-family: Arial, Helvetica, sans-serif;
+    color: black;
 }
 
 
@@ -34,8 +36,9 @@
     margin-right: 100px;
     border-radius: 5px;
     font-size: xx-large;
-    background-color: whitesmoke;
+    background-color: #DEC81F;
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 .imput{
@@ -48,6 +51,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
 }
 
 .texto{
@@ -58,5 +62,23 @@
 }
 
 .hr{
-    border-color:dimgray;
+    border-color:#33425E;
+}
+
+.boton{
+    height: 35px;
+    width: auto;
+    border-radius: 10px;
+    background-color: #3671df;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    border: 3px solid rgb(54, 113, 223);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white;
+
+}
+
+.unDiv{
+    margin-top: 15px;
 }

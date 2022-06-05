@@ -85,35 +85,46 @@
         </div>
 
         <div>
-          <button id="btnAgregarInicio" onclick="addProductos()">
+          <button class="boton" id="btnAgregarInicio" onclick="addProductos()">
             agregar
           </button>
         </div>
 
         <div class="apart">
-          <b>opciones de administrador</b>
+          <div>
+            <b class="unDiv">OPCIONES DE ADMINISTRADOR</b>
+          </div>
         </div>
         <div class="busqueda">
-          <button id="btnAgregar" onclick="productoCatego()">
+          <button class="boton" id="btnAgregar" onclick="productoCatego()">
             cantidad de productos por categoria 
           </button>
-          <button id="btnAgregar" onclick="TotalCatego()">
+          <button class="boton" id="btnAgregar" onclick="TotalCatego()">
             total de productos 
           </button>
-          <button id="btnAgregar" onclick="TotalPrecio()">
+          <button class="boton" id="btnAgregar" onclick="TotalPrecio()">
             valor total de productos  
           </button>
         </div>
+
+        <div>
+          <hr class="hr">
+        </div>
+
         <div>
           <input class="imput" type="text" id="nombreProduc" placeholder="ingrese el nombre del producto que desea buscar">
           <div >
-            <button id="btnAgregar" onclick="BuscarPro()">
+            <button class="boton" id="btnAgregar" onclick="BuscarPro()">
               Buscar  
             </button>
-            <button id="eliminar">
+            <button class="boton" id="eliminar">
               Eliminar  
             </button>
           </div>
+        </div>
+
+        <div>
+          <hr class="hr">
         </div>
 
         <div>
@@ -135,14 +146,14 @@
               Quitar cantidad
           </div>
 
-          <button onclick="addRes()">
+          <button class="boton" onclick="addRes()">
             Guardar cambios 
           </button>
         </div>
 
         <div class="factura" id="factura">
           <p>productos: </p>
-          <button onclick="ordenarAZ()" >A-Z</button>
+          <button class="boton" onclick="ordenarAZ()" >A-Z</button>
         </div>
       </div>
 
