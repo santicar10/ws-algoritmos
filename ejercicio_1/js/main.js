@@ -31,13 +31,9 @@ function addProductos() {
         if (inicio.checked == true) {
 
             agregarInicio(producto);
-        } else {
-            alert("por favor verifique los datos");
         }
         if (final.checked == true) {
             agregar(producto);
-        } else {
-            alert("por favor verifique los datos");
         }
 
     }
