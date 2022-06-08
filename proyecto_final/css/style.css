@@ -58,11 +58,16 @@
     height: 50px;
     width: 500px;
     border-bottom: 3px solid black;
-    color: grey;
+    color: black;
     font-size: larger;
     font-style: unset;
     font-display: inherit;
     font-family: 'PT Sans Narrow', sans-serif;
     margin-left: 25px;
     border-radius: 5px;
+    transition: transform .2s; 
+}
+
+.categorias:hover {
+    transform: scale(1.04); 
 }
