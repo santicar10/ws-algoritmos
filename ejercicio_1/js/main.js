@@ -82,7 +82,7 @@ function mostrar() {
 }
 
 function mostrarpro(producto) {
-    alert("producto encontrado\n" + producto.nombreProducto)
+alert("producto encontrado\n" + producto.nombreProducto+"\n"+producto.catego+"\n"+producto.canti+"\n"+producto.precio)
 }
 
 //punto 2 (agregar al inicio de la lista)

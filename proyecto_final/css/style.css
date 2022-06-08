@@ -1,0 +1,68 @@
+.navbar{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 180px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+*{
+    margin:0;
+}
+
+.vols img{
+    width: auto;
+    height: 120px;
+    margin-left: 25px;
+}
+
+.login{
+    height: 30px;
+    width: 30px;
+}
+
+.log{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 35px;
+    transition: transform .2s; 
+}
+
+.log:hover {
+    transform: scale(1.2); 
+}
+
+.parrafo{
+    margin-top: 10px;
+    font-family: Roboto,sans-serif;
+}
+
+.busqVar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.categorias{
+    background-color: transparent;
+    height: 50px;
+    width: 500px;
+    border-bottom: 3px solid black;
+    color: grey;
+    font-size: larger;
+    font-style: unset;
+    font-display: inherit;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin-left: 25px;
+    border-radius: 5px;
+}
