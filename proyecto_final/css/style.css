@@ -41,11 +41,6 @@
     transform: scale(1.2); 
 }
 
-.parrafo{
-    margin-top: 10px;
-    font-family: Roboto,sans-serif;
-}
-
 .busqVar{
     display: flex;
     justify-content: space-between;
@@ -62,6 +57,8 @@
     font-family: 'PT Sans Narrow', sans-serif;
     background-color: black;
     overflow: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
     float: left;
 }
 
@@ -94,6 +91,9 @@
 
 .boton{
     margin-left: 10px;
-    float: left;
     margin-top: 10px;
+}
+
+.show{
+    left: 0;
 }
