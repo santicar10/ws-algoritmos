@@ -12,6 +12,7 @@
 
 *{
     margin:0;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .vols img{
@@ -33,6 +34,7 @@
     flex-direction: column;
     margin-right: 35px;
     transition: transform .2s; 
+    cursor: pointer;
 }
 
 .log:hover {
@@ -53,21 +55,45 @@
     width: 100%;
 }
 
-.categorias{
-    background-color: transparent;
-    height: 50px;
-    width: 500px;
-    border-bottom: 3px solid black;
-    color: black;
-    font-size: larger;
-    font-style: unset;
-    font-display: inherit;
+.menu{
+    height: 1000px;
+    width: 350px;
+    font-size: x-large;
     font-family: 'PT Sans Narrow', sans-serif;
-    margin-left: 25px;
-    border-radius: 5px;
-    transition: transform .2s; 
+    background-color: black;
+    overflow: auto;
+    float: left;
 }
 
-.categorias:hover {
-    transform: scale(1.04); 
+.var{
+    margin-top: 25px;
+    height: 100%;
+    width: 100%;
+    float: left;
+    margin: 12px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.categoria ul li{
+    list-style: none;
+    padding: 12px 10px;
+}
+
+.categoria ul li:hover{
+    background-color: #4e4e4e;
+    cursor: pointer;
+}
+
+
+.categoria ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.boton{
+    margin-left: 10px;
+    float: left;
+    margin-top: 10px;
 }
