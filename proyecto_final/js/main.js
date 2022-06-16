@@ -1,13 +1,108 @@
 function autenticarAdmimnistrador(){
-    const usuario = (document.getElementById("precio"));
-    const pasword = (document.getElementById("precio"));
+    const usuario = document.getElementById("precio");
+    const pasword = document.getElementById("precio");
     if (usuario.value === "santiago" && pasword.value === "1234") {
 
-        window.location.assign("http://127.0.0.1:5500/proyecto_final/index.html")
+        window.location.assign("")
     } else {
         alert("usuario no existente, por favor verifique los datos")
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const url = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/";
 
