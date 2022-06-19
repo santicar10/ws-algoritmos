@@ -103,8 +103,7 @@ function pagar(){
 }
 
 function reload(){
-    window.location.reload();
-    
+    window.location.reload(); 
 }
 
 
@@ -113,18 +112,41 @@ function reload(){
 const url = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/";
 
 function redireccionar(){
-    var producto = {};
-    producto.nombre = "$Santiago";
-    fetch (url+"articulo_tenis",{
+
+    fetch (url+"tenisnike",{
         method:"POST",
-        body:JSON.stringify(producto),
+        body:JSON.stringify(),
         headers:{
             "Contenet-type":"application/json"
         }
     } ).then(response=>response.json())
     .then(data=>console.log(data))
+    modificar();
+}
 
-    buscar();
+function modificar() {
+
+    let product=
+        {
+            "name": "Small Plastic Table",
+            "precio": 377,
+            "cantidad": 1
+        }
+     
+
+    fetch (url+"tenisnike/1",{
+        method:"PUT",
+        body:JSON.stringify(JSON.stringify({
+            "name": "Small Plastic Table",
+            "precio": "377.00",
+            "cantidad": 94622,
+            "id": "1"
+          })),
+        headers:{
+            "Contenet-type":"application/json"
+        }
+    } ).then(response=>response.json())
+    .then(data=>console.log(data))
 }
 
 
@@ -145,8 +167,5 @@ function buscar(){
 
 
 
-const getProducts = async(resource) => {
-    const response = await fetch(url+resource);
-    return response.json();
-}
+
 

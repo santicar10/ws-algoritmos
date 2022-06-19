@@ -44,7 +44,7 @@
 }
 
 .menu{
-    height: 100%;
+    height: auto;
     width: 350px;
     font-size: x-large;
     font-family: 'PT Sans Narrow', sans-serif;
@@ -130,6 +130,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    margin: 3px solid blue;
 }
 
 .contS{
@@ -148,6 +149,7 @@
     color: black;
     font-size: xx-large;
     cursor: pointer;
+
 }
 
 .contS img {

@@ -1,0 +1,79 @@
+.nikeCont {
+    width: 700px;
+    color: black;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: rgb(228, 228, 228);
+    border: 3px solid rgb(32, 31, 31);
+    font-size: large;
+    height: auto;
+    float: right;
+}
+
+.nikeCont p {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.marcas6 {
+    align-items: baseline;
+}
+
+.section {
+    position: fixed;
+    background-color: black;
+    height: 950px;
+    top: 0px;
+    right: 1px;
+    width: 300px;
+
+}
+
+.nose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 500px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.botonCompra {
+    margin-top: 15px;
+    height: 50px;
+    width: 150px;
+    transition: transform .2s;
+    cursor: pointer;
+    font-size: x-large;
+    background-color: #1ed5c3;
+    border: 5px solid #15ac9d;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.botonCompra:hover {
+    transform: scale(1.05);
+}
+
+.categoriass{
+    margin-top: 100px;
+}
+
+.comprarr{
+    height: 200px;
+    width: 800px;
+    background-color: rgb(228, 228, 228) ;
+    margin-left: 500px;
+    border-radius: 15px;
+    border: 3px solid rgb(32, 31, 31);
+    margin-bottom: 15px;
+}
+
+.comprarr p{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: xx-large;
+}

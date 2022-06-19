@@ -61,10 +61,6 @@
     margin-bottom: 10px;
 }
 
-.hr{
-    border-color:#33425E;
-}
-
 .boton{
     height: 35px;
     width: auto;
@@ -81,4 +77,16 @@
 
 .unDiv{
     margin-top: 15px;
+}
+
+.navbarA{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 180px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }

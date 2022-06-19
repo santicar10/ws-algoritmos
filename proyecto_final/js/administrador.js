@@ -253,13 +253,22 @@ function pintarArray() {
 
 //local storage
 
-if (localStorage.getItem("usuario") != null) {
-    alert("Bienvenid@ " + localStorage.getItem("usuario"));
-}
-else {
-    let nombre = prompt("ingrese nombre");
-    localStorage.setItem("usuario", nombre);
-}
+const url = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/";
+
+// function AgregarProducto(){
+//     var producto = {};
+//     producto.nombre = "$Santiago";
+//     fetch (url+"articulo_tenis",{
+//         method:"POST",
+//         body:JSON.stringify(producto),
+//         headers:{
+//             "Contenet-type":"application/json"
+//         }
+//     } ).then(response=>response.json())
+//     .then(data=>console.log(data))
+
+//     buscar();
+// }
 
 
 

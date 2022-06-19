@@ -110,3 +110,15 @@
 .boton:hover {
     transform: scale(1.05); 
 }
+
+.login{
+    height: 30px;
+    width: 30px;
+    transition: transform .2s; 
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.login:hover {
+    transform: scale(1.3); 
+}
