@@ -11,21 +11,18 @@ async function arreglo(){
 }
 
 arreglo();
-
-const factura = document.getElementById("nike")
+const factura = document.getElementById("nike");
 let products = [];
 
-
-
 async function showProducts (){
+    let cont = 0;
     products = await getProducts();
     for (var i in products){
         let div = document.createElement("DIV");
         div.setAttribute("class","nikeCont");
         let boton = document.createElement("button");
-        boton.addEventListener("click",()=>{
-            anadirCarrito();
-        })
+        boton.setAttribute("id",cont);
+        anadirCarrito(boton);
         boton.setAttribute("class","botonCompra");
         boton.innerHTML="comprar";
         const name = document.createElement("p");
@@ -41,26 +38,39 @@ async function showProducts (){
         div.appendChild(cantidadD);
         div.appendChild(boton);
         factura.appendChild(div);
+        cont ++;
     }
-
-    products.forEach(item => {
-        console.log(item.cantidadD)
-    });
-
-    console.log(products);
 }
 
 contador = 0;
+let cantidadesPrecio=[];
+let cantidades = [];
 
-function anadirCarrito(){
-    contador = contador + 1;
-    console.log(contador);
-    let span = document.getElementById("span");
-    span.innerHTML=contador;
+function anadirCarrito(boton){
+    boton.addEventListener("click",()=>{
+        let idB = boton.id;
+        cantidadesPrecio.push(products[idB].precio);
+        products[idB].cantidadD - 1;
+        let acumx = 0;
+        for (let i = 0; i < cantidadesPrecio.length; i++) {
+            acumx = acumx + cantidadesPrecio[i];           
+        }
+        let span2 = document.getElementById("span2");
+        span2.innerHTML=acumx;
+        contador = contador + 1;
+        let span = document.getElementById("span");
+        span.innerHTML=contador;
+    });
 }
 
 showProducts();
 
-function carrito(){
-    
+function vaciar(){
+    contador = 0;
+    let span = document.getElementById("span");
+    span.innerHTML=contador;
+    cantidadesPrecio = [0];
+    let span2 = document.getElementById("span2");
+    span2.innerHTML=contador;
 }
+
