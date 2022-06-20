@@ -3,7 +3,7 @@ function nikeChange(){
 }
 
 function pumaChange(){
-    location.href="AdidasProducto.html"
+    location.href="puma.html"
 }
 
 function adidasChange(){
