@@ -8,6 +8,8 @@ function Comprobar(){
     }
 }
 
+
+
 // let nike = [
 //     {
 //         "nombre":"Nike Air Force One",

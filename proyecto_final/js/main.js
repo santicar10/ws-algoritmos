@@ -100,6 +100,8 @@ function nikeChange(nombre){
 
 
 
+
+
 // const url = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/";
 
 // function agregarProducto(producto,categoria){

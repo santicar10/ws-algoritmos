@@ -35,10 +35,10 @@
     align-items: center;
     flex-direction: column;
     align-content: center;
-    margin-left: 500px;
     margin-top: 25px;
     margin-bottom: 15px;
 }
+
 
 .botonCompra {
     margin-top: 15px;
@@ -63,13 +63,19 @@
 }
 
 .comprarr{
-    height: 200px;
-    width: 800px;
-    background-color: rgb(228, 228, 228) ;
-    margin-left: 500px;
+    height: 250px;
+    width: 82vw;
+    background-color: black ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
     border-radius: 15px;
-    border: 3px solid rgb(32, 31, 31);
+    border: 3px solid whitesmoke;
     margin-bottom: 15px;
+    margin-left: 10px;
 }
 
 .comprarr p{

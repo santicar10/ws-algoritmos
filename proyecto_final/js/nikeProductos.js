@@ -22,7 +22,8 @@ async function showProducts() {
     }
     let cont = 0;
     products = await getProducts();
-    for (var i in products) {
+    products.forEach(item => {
+        
         let div = document.createElement("DIV");
         div.setAttribute("class", "nikeCont");
         let boton = document.createElement("button");
@@ -34,9 +35,9 @@ async function showProducts() {
         const precio = document.createElement("p");
         const cantidadD = document.createElement("p");
 
-        name.textContent = "NOMBRE: " + products[i].name;
-        precio.textContent = "PRECIO: " + products[i].precio;
-        cantidadD.textContent = "CANTIDAD: " + products[i].cantidad;
+        name.textContent = "NOMBRE: " + item.name;
+        precio.textContent = "PRECIO: " + item.precio;
+        cantidadD.textContent = "CANTIDAD: " + item.cantidad;
 
         div.appendChild(name);
         div.appendChild(precio);
@@ -44,7 +45,7 @@ async function showProducts() {
         div.appendChild(boton);
         factura.appendChild(div);
         cont++;
-    }
+    }); 
 }
 
 showProducts();
@@ -66,7 +67,6 @@ function redireccionar(id, nuevaCantidad) {
     } else {
         alert("el rpoducto está agotado");
     }
-
 }
 
 function anadirCarrito(boton) {

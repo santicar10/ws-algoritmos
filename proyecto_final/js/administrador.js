@@ -1,283 +1,188 @@
-const factura = document.getElementById("factura");
-let productos = [];
-
-pintarArray();
-mostrar();
-
-const inicio = document.getElementById("radioStart");
-const final = document.getElementById("radioEnd");
-const nombreProducto = document.getElementById("nombreProducto");
-const categoria = document.getElementById("catego")
-const cantidad = (document.getElementById("canti"));
-const precio = (document.getElementById("precio"));
-
-function addProductos() {
-
-    if (inicio.checked == false && final.checked == false) {
-        alert("Por favor seleccione una opcion")
-    }
-    else if (nombreProducto.value === "" || categoria.value === "" || parseInt(cantidad.value) === "" || parseInt(precio.value) === "") {
-        alert("porfavor verifique los datos")
-
-    } else {
-
-        const producto = {
-            "nombreProducto": nombreProducto.value,
-            "catego": categoria.value,
-            "canti": parseInt(cantidad.value),
-            "precio": parseInt(precio.value)
-        }
-
-        if (inicio.checked == true) {
-
-            agregarInicio(producto);
-        }
-        if (final.checked == true) {
-            agregar(producto);
-        }
-
-    }
+const url = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/tenisnike/";
+const getProducts = async () => {
+    const response = await fetch(url);
+    return response.json();
 }
 
-//punto 1 (agregar a la lista)
+let products = [];
 
-function agregar(producto) {
-    productos.push(producto);
-    mostrar();
-    pintarArray();
+async function arreglo() {
+    products = await getProducts();
+    showProducts();
 }
 
-function mostrar() {
+arreglo();
 
-    if (factura.hasChildNodes) {
-        let nodes = factura.childNodes;
-        while (factura.firstChild) {
-            factura.removeChild(factura.firstChild);
-        }
-    }
+const factura = document.getElementById("total");
 
-    console.log(productos.length);
+async function showProducts() {
+    let cont = 0;
+    products.forEach(item => {
+        
+        const identificador = document.createElement("p");
+        let div = document.createElement("DIV");
+        div.setAttribute("class", "nikeCont");
+        let boton = document.createElement("button");
+        boton.setAttribute("id", cont);
+        boton.setAttribute("class", "botonCompra");
+        boton.innerHTML = "eliminar";
+        const name = document.createElement("p");
+        const precio = document.createElement("p");
+        const cantidadD = document.createElement("p");
 
-    productos.forEach(item => {
+        identificador.textContent = "SNEAKER NIKE"
+        name.textContent = "NOMBRE: " + item.name;
+        precio.textContent = "PRECIO: " + item.precio;
+        cantidadD.textContent = "CANTIDAD: " + item.cantidad;
 
-        const name1 = document.createElement("p");
-        const name2 = document.createElement("p");
-        const name3 = document.createElement("p");
-        const name4 = document.createElement("p");
-        const separate = document.createElement("hr");
-
-        console.log("holaa");
-
-        name1.textContent = "NOMBRE: " + item.nombreProducto;
-        name2.textContent = "CATEGORIA: " + item.catego;
-        name3.textContent = "CANTIDAD: " + item.canti;
-        name4.textContent = "PRECIO: " + item.precio;
-
-        factura.appendChild(name1);
-        factura.appendChild(name2);
-        factura.appendChild(name3);
-        factura.appendChild(name4);
-        factura.appendChild(separate);
-    })
+        div.appendChild(name);
+        div.appendChild(precio);
+        div.appendChild(cantidadD);
+        div.appendChild(boton);
+        factura.appendChild(identificador)
+        factura.appendChild(div);
+        cont++;
+    }); 
 }
 
-function mostrarpro(producto) {
-alert("producto encontrado\n" + producto.nombreProducto+"\n"+producto.catego+"\n"+producto.canti+"\n"+producto.precio)
+const url2 = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/tenisAdidas/";
+const getProducts2 = async () => {
+    const response = await fetch(url2);
+    return response.json();
 }
 
-//punto 2 (agregar al inicio de la lista)
+let products2 = [];
 
-function agregarInicio(producto) {
-
-    productos.unshift(producto);
-    mostrar();
-    pintarArray();
+async function arreglo2() {
+    products2 = await getProducts2();
+    showProducts2();
 }
 
-//punto 3 (total de productos por categoria)
+arreglo2();
 
-let cont1 = 0;
-let cont2 = 0;
-let cont3 = 0;
+const factura2 = document.getElementById("total2");
 
-function productoCatego() {
-    productos.forEach(item => {
-        if (item.catego == "Tecnologia") {
-            cont1 = cont1 + 1;
-        } else {
-            if (item.catego == "Hogar") {
-                cont2 = cont2 + 1;
-            } else {
-                cont3 = cont3 + 1;
-            }
-        }
-    });
-    alert("de la categoria tecnologia hay: " + cont1 + " productos" + "\n" + "de la categoria hogar hay: " + cont2 + " productos" + "\n" + "de la categoria Ropa hay: " + cont3 + " productos" + "\n")
+async function showProducts2() {
+    let cont = 0;
+    products2.forEach(item => {
+        
+        const identificador = document.createElement("p");
+        let div = document.createElement("DIV");
+        div.setAttribute("class", "nikeCont");
+        let boton = document.createElement("button");
+        boton.setAttribute("id", cont);
+        boton.setAttribute("class", "botonCompra");
+        boton.innerHTML = "eliminar";
+        const name = document.createElement("p");
+        const precio = document.createElement("p");
+        const cantidadD = document.createElement("p");
+
+        identificador.textContent = "SNEAKER ADIDAS"
+        name.textContent = "NOMBRE: " + item.name;
+        precio.textContent = "PRECIO: " + item.precio;
+        cantidadD.textContent = "CANTIDAD: " + item.cantidad;
+
+        div.appendChild(name);
+        div.appendChild(precio);
+        div.appendChild(cantidadD);
+        div.appendChild(boton);
+        factura2.appendChild(identificador)
+        factura2.appendChild(div);
+        cont++;
+    }); 
 }
 
-//punto 4 (cantidad de todos los productos)
-
-function TotalCatego() {
-    let total = 0;
-    total = cont1 + cont2 + cont3;
-    alert("el total de productos es de: " + total);
-
+const url3 = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/teniPuma/";
+const getProducts3 = async () => {
+    const response = await fetch(url3);
+    return response.json();
 }
 
-//punto 5 (precio total de todos los productos)
+let products3 = [];
 
-function TotalPrecio() {
-    let total = 0;
-    productos.forEach(item => {
-        total = total + item.precio;
-    });
-    alert("el valor total de los productos es de: " + total);
+async function arreglo3() {
+    products3 = await getProducts3();
+    showProducts3();
 }
 
-//punjto 6 (agregar cantidades)
+arreglo3();
 
-function addRes() {
-    const aad = document.getElementById("radioAdd");
-    const res = document.getElementById("radioRes");
+const factura3 = document.getElementById("total3");
 
-    if (aad.checked == true) {
-        add();
-    }
-    if (res.checked == true) {
-        Res();
-    }
+async function showProducts3() {
+    let cont = 0;
+    products3.forEach(item => {
+        
+        const identificador = document.createElement("p");
+        let div = document.createElement("DIV");
+        div.setAttribute("class", "nikeCont");
+        let boton = document.createElement("button");
+        boton.setAttribute("id", cont);
+        boton.setAttribute("class", "botonCompra");
+        boton.innerHTML = "eliminar";
+        const name = document.createElement("p");
+        const precio = document.createElement("p");
+        const cantidadD = document.createElement("p");
+
+        identificador.textContent = "SNEAKER PUMA"
+        name.textContent = "NOMBRE: " + item.name;
+        precio.textContent = "PRECIO: " + item.precio;
+        cantidadD.textContent = "CANTIDAD: " + item.cantidad;
+
+        div.appendChild(name);
+        div.appendChild(precio);
+        div.appendChild(cantidadD);
+        div.appendChild(boton);
+        factura3.appendChild(identificador)
+        factura3.appendChild(div);
+        cont++;
+    }); 
 }
 
-function add() {
-    const namee = document.getElementById("editPro").value;
-    const cant = parseInt(document.getElementById("numCant").value);
-
-    productos.forEach(item => {
-        if (item.nombreProducto == namee) {
-            item.canti = item.canti + cant;
-            alert("se edito con exito: " + item.nombreProducto + " la cantidad agregada ha sido de: " + cant);
-        }
-        mostrar()
-    });
+const url4 = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/Accesorios/";
+const getProducts4 = async () => {
+    const response = await fetch(url4);
+    return response.json();
 }
 
-//punto 7 (eliminar cantidades)
+let products4 = [];
 
-function Res() {
-    const namee = document.getElementById("editPro").value;
-    const cant = parseInt(document.getElementById("numCant").value);
-
-    productos.forEach(item => {
-        if (item.nombreProducto == namee) {
-            item.canti = item.canti - cant;
-            alert("se edito con exito: " + item.nombreProducto + "\n" + " la cantidad restada ha sido de: " + cant);
-        }
-        mostrar()
-
-    });
+async function arreglo4() {
+    products4 = await getProducts4();
+    showProducts4();
 }
 
-//punto 8 (buscar producto)
+arreglo4();
 
-function BuscarPro() {
-    let namee = document.getElementById("nombreProduc").value;
-    console.log(namee)
-    const objectoEncontrado = productos.find(item => item.nombreProducto === namee);
-    if (objectoEncontrado != null) {
-        mostrarpro(objectoEncontrado);
-    } else {
-        alert("No hay un producto con el nombre");
-    }
+const factura4 = document.getElementById("total4");
+
+async function showProducts4() {
+    let cont = 0;
+    products4.forEach(item => {
+        
+        const identificador = document.createElement("p");
+        let div = document.createElement("DIV");
+        div.setAttribute("class", "nikeCont");
+        let boton = document.createElement("button");
+        boton.setAttribute("id", cont);
+        boton.setAttribute("class", "botonCompra");
+        boton.innerHTML = "eliminar";
+        const name = document.createElement("p");
+        const precio = document.createElement("p");
+        const cantidadD = document.createElement("p");
+
+        identificador.textContent = "ACCESORIO"
+        name.textContent = "NOMBRE: " + item.name;
+        precio.textContent = "PRECIO: " + item.precio;
+        cantidadD.textContent = "CANTIDAD: " + item.cantidad;
+
+        div.appendChild(name);
+        div.appendChild(precio);
+        div.appendChild(cantidadD);
+        div.appendChild(boton);
+        factura4.appendChild(identificador)
+        factura4.appendChild(div);
+        cont++;
+    }); 
 }
-
-//punto 9 (eliminar producto)
-
-const eliminar = document.getElementById("eliminar");
-
-function borrar(name) {
-    console.log(name);
-    let n = 0;
-
-    productos.forEach((producto) => {
-        if (producto.nombreProducto == name) {
-            console.log(producto.nombreProducto);
-            n = producto.nombreProducto;
-        }
-    });
-    const nuevaLista = productos.filter(producto => producto.nombreProducto !== n);
-    productos = nuevaLista;
-    mostrar();
-
-}
-
-eliminar.addEventListener("click", () => {
-    const name = document.getElementById("nombreProduc").value;
-    borrar(name);
-})
-
-//punto 10 (ordenar en orden alfabetico)
-
-function ordenarAZ() {
-    productos.sort((nombre1, nombre2) => {
-        if (nombre1.nombreProducto < nombre2.nombreProducto) {
-            return -1;
-        } else {
-            if (nombre2.nombreProducto > nombre1.nombreProducto) {
-                return 1;
-            } else {
-                return 0;
-            }
-        }
-    });
-    let mensaje = "";
-    productos.forEach(producto => {
-        mensaje = mensaje + "Nombre: " + producto.nombreProducto + "\n" +
-            "Categoria: " + producto.catego + "\n" +
-            "Cantidad: " + producto.canti + "\n" +
-            "Precio: " + producto.precio + "\n" +
-            "==========================================" + "\n";
-    });
-    alert(mensaje);
-}
-
-// ()()()()
-
-function pintarArray() {
-    productos.forEach(producto => {
-        console.log("Nombre: " + producto.nombreProducto);
-        console.log("Categoria: " + producto.catego);
-        console.log("Cantidad: " + producto.canti);
-        console.log("Precio: " + producto.precio);
-    })
-}
-
-//local storage
-
-const url = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/";
-
-// function AgregarProducto(){
-//     var producto = {};
-//     producto.nombre = "$Santiago";
-//     fetch (url+"articulo_tenis",{
-//         method:"POST",
-//         body:JSON.stringify(producto),
-//         headers:{
-//             "Contenet-type":"application/json"
-//         }
-//     } ).then(response=>response.json())
-//     .then(data=>console.log(data))
-
-//     buscar();
-// }
-
-
-
-
-
-
-
-
-
-
-
 

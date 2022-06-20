@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/administrador.css" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/nike.css">
   <link rel="shortcut icon" href="img/IMG-1139-modified.png" />
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet" />
   <title>Administrador</title>
@@ -17,123 +17,15 @@
     <div class="vols">
       <img src="img/Captura de pantalla 2022-06-07 202917.png" alt="logo" />
     </div>
-    <a href="index.html"><img class="login" src="img/home.png" alt="btn_log" /></a>
   </nav>
-  <div class="cont">
-    <div>
-      <select class="imput" aria-label="select example" id="catego">
-        <option value="">Escoja categoria del producto</option>
-        <option value="Nike">Nike</option>
-        <option value="Tecnologia">Adidas</option>
-        <option value="Ropa">Puma</option>
-        <option value="Hogar">Gafas</option>
-        <option value="Tecnologia">Gorras</option>
-      </select>
-      <div class="texto">Elija una categoria</div>
+  <div>
+    <div class="nose nose2" id="total">
     </div>
-
-    <div>
-      <hr class="hr">
+    <div class="nose" id="total2">
     </div>
-
-    <div>
-      <input type="text" id="nombreProducto" class="imput" placeholder="nombre del producto"></input>
-      <div class="texto">
-        por favor ingrese el nombre del producto.
-      </div>
+    <div class="nose" id="total3">
     </div>
-
-    <div>
-      <hr class="hr">
-    </div>
-
-    <div>
-      <input type="text" id="precio" class="imput" placeholder="precio del producto" />
-      <div class="texto">
-        por favor ingrese la precio del producto.
-      </div>
-    </div>
-
-    <div>
-      <hr class="hr">
-    </div>
-
-    <div>
-      <input type="text" id="canti" class="imput" placeholder="cantidad del producto" />
-      <div class="texto">
-        por favor ingrese la cantidad del producto.
-      </div>
-    </div>
-    <div>
-      <button class="boton" id="btnAgregarInicio" onclick="addProductos()">
-        agregar
-      </button>
-    </div>
-
-    <div class="apart">
-      <div>
-        <b class="unDiv">OPCIONES DE ADMINISTRADOR</b>
-      </div>
-    </div>
-    <div class="busqueda">
-      <button class="boton" id="btnAgregar" onclick="productoCatego()">
-        cantidad de productos por categoria
-      </button>
-      <button class="boton" id="btnAgregar" onclick="TotalCatego()">
-        total de productos
-      </button>
-      <button class="boton" id="btnAgregar" onclick="TotalPrecio()">
-        valor total de productos
-      </button>
-    </div>
-
-    <div>
-      <hr class="hr">
-    </div>
-
-    <div>
-      <input class="imput" type="text" id="nombreProduc" placeholder="ingrese el nombre del producto que desea buscar">
-      <div>
-        <button class="boton" id="btnAgregar" onclick="BuscarPro()">
-          Buscar
-        </button>
-        <button class="boton" id="eliminar">
-          Eliminar
-        </button>
-      </div>
-    </div>
-
-    <div>
-      <hr class="hr">
-    </div>
-
-    <div>
-      <div>
-        <input class="imput" type="text" id="editPro" placeholder="ingrese el nombre del producto que desea ajustar">
-      </div>
-
-      <div>
-        <input class="imput" type="text" id="numCant" placeholder="ingrese la cantidad que desea agregar o quitar">
-      </div>
-
-      <div class="texto">
-        <input type="radio" id="radioAdd" name="radioOpcion">
-        Agregar cantidad
-      </div>
-
-      <div class="texto">
-        <input type="radio" id="radioRes">
-        Quitar cantidad
-      </div>
-
-      <button class="boton" onclick="addRes()">
-        Guardar cambios
-      </button>
-    </div>
-
-    <div class="factura" id="factura">
-      <p>productos: </p>
-      <button class="boton" onclick="ordenarAZ()">A-Z</button>
+    <div class="nose" id="total4">
     </div>
   </div>
   <div class="navbarA">
@@ -143,8 +35,6 @@
   </div>
 
   <script src="js/administrador.js"></script>
-  <script src="js/admin.js"></script>
-  <script src="js/main.js"></script>
   </div>
 </body>
 
