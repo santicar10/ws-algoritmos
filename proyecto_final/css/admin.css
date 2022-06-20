@@ -56,7 +56,6 @@
 }
 
 .entrar{
-    height: 450px;
     width: 450px;
     background-color: black;
     border-radius: 10px;
@@ -97,6 +96,7 @@
 
 .boton{
     margin-top: 15px;
+    margin-bottom: 35px;
     height: 50px;
     width: 150px;
     transition: transform .2s; 

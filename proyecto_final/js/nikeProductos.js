@@ -53,15 +53,19 @@ contador = 0;
 let cantidadesPrecio = [];
 
 function redireccionar(id, nuevaCantidad) {
-    fetch(url + id, {
-        method: 'PUT',
-        body: JSON.stringify({
-            cantidad: nuevaCantidad,
-        }),
-        headers: {
-            "Content-type": "application/json"
-        }
-    })
+    if (nuevaCantidad > 0) {
+        fetch(url + id, {
+            method: 'PUT',
+            body: JSON.stringify({
+                cantidad: nuevaCantidad,
+            }),
+            headers: {
+                "Content-type": "application/json"
+            }
+        })
+    } else {
+        alert("el rpoducto está agotado");
+    }
 
 }
 
@@ -92,5 +96,11 @@ function vaciar() {
     let span2 = document.getElementById("span2");
     span2.innerHTML = contador;
 }
+
+let confirmar = document.getElementById("confirmar");
+confirmar.addEventListener("click",()=>{
+    location.href="carrito.html"
+})
+
 
 
