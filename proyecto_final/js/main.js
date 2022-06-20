@@ -1,8 +1,19 @@
-function nikeChange(nombre){
+function nikeChange(){
     location.href="nikeProductos.html"
-    let nombreCategoria = document.getElementById("nombreCategoria").value;
-    console.log(nombreCategoria);
 }
+
+function pumaChange(){
+    location.href="AdidasProducto.html"
+}
+
+function adidasChange(){
+    location.href="AdidasProducto.html"
+}
+
+function accesoriosChange(){
+    location.href="accesorio.html"
+}
+
 
 
 
