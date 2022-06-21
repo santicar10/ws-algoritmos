@@ -1,3 +1,75 @@
+function BuscarPro() {
+    let namee = document.getElementById("nombreProduc").value;
+    const objectoEncontrado = products.find(item => item.name === namee);
+    if (objectoEncontrado != null) {
+        alert("el producto: " + Object.entries(objectoEncontrado) + "se ha encontrado");
+    } else {
+        alert("No hay un producto con el nombre");
+    }
+}
+
+function productoTotall() {
+    let totalCompra = products.reduce((total,item) => {
+        item.cantidad = parseInt(item.cantidad);
+        return total + item.cantidad;
+    }, 0)
+    alert(totalCompra);
+}
+
+function BuscarPro2() {
+    let namee = document.getElementById("nombreProduc2").value;
+    const objectoEncontrado = products2.find(item => item.name === namee);
+    if (objectoEncontrado != null) {
+        alert("el producto: " + Object.entries(objectoEncontrado) + "se ha encontrado");
+    } else {
+        alert("No hay un producto con el nombre");
+    }
+}
+
+function productoTotall2() {
+    let totalCompra = products2.reduce((total,item) => {
+        item.cantidad = parseInt(item.cantidad);
+        return total + item.cantidad;
+    }, 0)
+    alert(totalCompra);
+}
+
+function BuscarPro3() {
+    let namee = document.getElementById("nombreProduc3").value;
+    const objectoEncontrado = products3.find(item => item.name === namee);
+    if (objectoEncontrado != null) {
+        alert("el producto: " + Object.entries(objectoEncontrado) + "se ha encontrado");
+    } else {
+        alert("No hay un producto con el nombre");
+    }
+}
+
+function productoTotall3() {
+    let totalCompra = products3.reduce((total,item) => {
+        item.cantidad = parseInt(item.cantidad);
+        return total + item.cantidad;
+    }, 0)
+    alert(totalCompra);
+}
+
+function BuscarPro4() {
+    let namee = document.getElementById("nombreProduc4").value;
+    const objectoEncontrado = products4.find(item => item.name === namee);
+    if (objectoEncontrado != null) {
+        alert("el producto: " + Object.entries(objectoEncontrado) + "se ha encontrado");
+    } else {
+        alert("No hay un producto con el nombre");
+    }
+}
+
+function productoTotall4() {
+    let totalCompra = products4.reduce((total,item) => {
+        item.cantidad = parseInt(item.cantidad);
+        return total + item.cantidad;
+    }, 0)
+    alert(totalCompra);
+}
+
 const url = "https://62a4a1a347e6e40063960d7c.mockapi.io/api/v1/tenisnike/"
 const getProducts = async () => {
     const response = await fetch(url);
@@ -27,11 +99,11 @@ async function showProducts() {
         let div = document.createElement("DIV");
         div.setAttribute("class", "nikeCont");
         let boton = document.createElement("button");
-        boton.setAttribute("id",item.id);
+        boton.setAttribute("id", item.id);
         let boton2 = document.createElement("button");
-        boton2.setAttribute("id",item.id);
+        boton2.setAttribute("id", item.id);
         let boton3 = document.createElement("button");
-        boton3.setAttribute("id",item.id);
+        boton3.setAttribute("id", item.id);
         boton.setAttribute("class", "botonCompra");
         boton.innerHTML = "Quitar";
         boton2.setAttribute("class", "botonCompra");
@@ -58,7 +130,7 @@ async function showProducts() {
         div.appendChild(boton3);
         factura.appendChild(identificador);
         factura.appendChild(div);
-    }); 
+    });
 }
 
 function redireccionar(id, nuevaCantidad) {
@@ -98,10 +170,10 @@ function elimiarP(boton3) {
 }
 
 function redireccionarE(id) {
-    fetch(url+id,{
-        method:'DELETE',
+    fetch(url + id, {
+        method: 'DELETE',
     })
-    .then(response=>response.json());
+        .then(response => response.json());
     arreglo();
 }
 
@@ -135,11 +207,11 @@ async function showProducts2() {
         let div = document.createElement("DIV");
         div.setAttribute("class", "nikeCont");
         let boton = document.createElement("button");
-        boton.setAttribute("id",item.id);
+        boton.setAttribute("id", item.id);
         let boton2 = document.createElement("button");
-        boton2.setAttribute("id",item.id);
+        boton2.setAttribute("id", item.id);
         let boton3 = document.createElement("button");
-        boton3.setAttribute("id",item.id);
+        boton3.setAttribute("id", item.id);
         boton.setAttribute("class", "botonCompra");
         boton.innerHTML = "Quitar";
         boton2.setAttribute("class", "botonCompra");
@@ -166,7 +238,7 @@ async function showProducts2() {
         div.appendChild(boton3);
         factura2.appendChild(identificador);
         factura2.appendChild(div);
-    }); 
+    });
 }
 
 function redireccionar2(id, nuevaCantidad) {
@@ -206,10 +278,10 @@ function elimiarP2(boton3) {
 }
 
 function redireccionarE2(id) {
-    fetch(url2+id,{
-        method:'DELETE',
+    fetch(url2 + id, {
+        method: 'DELETE',
     })
-    .then(response=>response.json());
+        .then(response => response.json());
     arreglo2();
 }
 
@@ -241,11 +313,11 @@ async function showProducts3() {
         let div = document.createElement("DIV");
         div.setAttribute("class", "nikeCont");
         let boton = document.createElement("button");
-        boton.setAttribute("id",item.id);
+        boton.setAttribute("id", item.id);
         let boton2 = document.createElement("button");
-        boton2.setAttribute("id",item.id);
+        boton2.setAttribute("id", item.id);
         let boton3 = document.createElement("button");
-        boton3.setAttribute("id",item.id);
+        boton3.setAttribute("id", item.id);
         boton.setAttribute("class", "botonCompra");
         boton.innerHTML = "Quitar";
         boton2.setAttribute("class", "botonCompra");
@@ -272,7 +344,7 @@ async function showProducts3() {
         div.appendChild(boton3);
         factura3.appendChild(identificador);
         factura3.appendChild(div);
-    }); 
+    });
 }
 
 function redireccionar3(id, nuevaCantidad) {
@@ -312,10 +384,10 @@ function elimiarP3(boton3) {
 }
 
 function redireccionarE3(id) {
-    fetch(url3+id,{
-        method:'DELETE',
+    fetch(url3 + id, {
+        method: 'DELETE',
     })
-    .then(response=>response.json());
+        .then(response => response.json());
     arreglo3();
 }
 
@@ -347,11 +419,11 @@ async function showProducts4() {
         let div = document.createElement("DIV");
         div.setAttribute("class", "nikeCont");
         let boton = document.createElement("button");
-        boton.setAttribute("id",item.id);
+        boton.setAttribute("id", item.id);
         let boton2 = document.createElement("button");
-        boton2.setAttribute("id",item.id);
+        boton2.setAttribute("id", item.id);
         let boton3 = document.createElement("button");
-        boton3.setAttribute("id",item.id);
+        boton3.setAttribute("id", item.id);
         boton.setAttribute("class", "botonCompra");
         boton.innerHTML = "Quitar";
         boton2.setAttribute("class", "botonCompra");
@@ -378,7 +450,7 @@ async function showProducts4() {
         div.appendChild(boton3);
         factura4.appendChild(identificador);
         factura4.appendChild(div);
-    }); 
+    });
 }
 
 function redireccionar4(id, nuevaCantidad) {
@@ -418,9 +490,17 @@ function elimiarP4(boton3) {
 }
 
 function redireccionarE4(id) {
-    fetch(url4+id,{
-        method:'DELETE',
+    fetch(url4 + id, {
+        method: 'DELETE',
     })
-    .then(response=>response.json());
+        .then(response => response.json());
     arreglo4();
+}
+
+if (localStorage.getItem("usuario") != null) {
+    alert("Bienvenid@ " + localStorage.getItem("usuario"));
+}
+else {
+    let nombre = prompt("ingrese nombre");
+    localStorage.setItem("usuario", nombre);
 }
